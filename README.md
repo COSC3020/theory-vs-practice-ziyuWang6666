@@ -5,9 +5,9 @@
   actual performance in practice.
   ## Answer
   1. Asymptotic is just meaning growth this way, it's a kind of change.
-  Also, it removes the constant factor, it doesn't mean the exact number.
+  Also, it removes the constant factor and lower order, it doesn't mean the exact number. Because as n goes to infinte large, the constant factor and lower order are not affect too much.
   2. Hardware and Platform Variability: In today's world of computer hardware things like CPUs, memory hierarchies, and parallelism can all affect how well a program runs. Even if you have the same algorithm, it might not work the same on different hardware or if you use different compilers and settings.
-  3. Cannot make inferences between different cases in general. The best case does not equal Omega, the worst case does not mean the performance is big O, and the average case does not indicate it performs as Theta.
+  3. Different implementations take different amounts of time. For example, the expressions print(2+2+2+2) and print(2*4) both produce the same result of 8, but the multiplication expression takes longer to compute than the addition expression.
 
 - Suppose finding a particular element in a binary search tree with 1,000
   elements takes 5 seconds. Given what you know about the asymptotic complexity
@@ -16,15 +16,15 @@
 
   ## Answer
   A binary search tree's avergae time complexity is O(logn), because O(log1000 base 2)=10 seconds.
-  So it will take O(log10,000 base 2)=14 seconds.
+  So it will take O(log10,000 base 2) to around 13.3 seconds.
 
 - You measure the time with 10,000 elements and it takes 100 seconds! List 3
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
 
   ## Answer
-  1. The computer hardware may not be optimized.
-  2. It's possible that the input data is poorly organized, causing the algorithm to behave poorly, resulting in O(nlog2(10,000)).
+  1. The computer setup is not very powerful.
+  2. When searching for a specific element in a binary search tree, the partially unbalanced tree may require searching through multiple nodes before finding the desired element.
   3. Although constant and low-order terms are not factored into the algorithm, they can significantly impact the actual running time in practice.
 
 Add your answers to this markdown file.
