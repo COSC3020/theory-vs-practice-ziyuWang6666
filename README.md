@@ -4,10 +4,9 @@
 - List 3 reasons why asymptotic analysis may be misleading with respect to
   actual performance in practice.
   ## Answer
-  1. Asymptotic is just meaning growth this way, it's a kind of change.
-  Also, it removes the constant factor and lower order, it doesn't mean the exact number. Because as n goes to infinte large, the constant factor and lower order are not affect too much.
-  2. Hardware and Platform Variability: In today's world of computer hardware things like CPUs, memory hierarchies, and parallelism can all affect how well a program runs. Even if you have the same algorithm, it might not work the same on different hardware or if you use different compilers and settings.
-  3. Different implementations take different amounts of time. For example, the expressions print(2+2+2+2) and print(2*4) both produce the same result of 8, but the multiplication expression takes longer to compute than the addition expression.
+  1. Asymptotic is just meaning growth this way, it's a kind of change. Also, it removes the constant factor(c) and lower order, it doesn't mean the exact number. Because as n goes to infinte large, the constant factor and lower order are not affect too much. But when the input size is small, 10000*n runs faster than n, even though they have the same asymptotic analysis(n), which can be misleading.
+  2. Hardware and Platform Variability: In today's world of computer hardware like memory hierarchies, and parallelism can all affect how well a program runs. Even if you have the same algorithm, it might not work the same on different hardware or if you use different compilers and settings.
+  3. n0 must reach a certain number of n
 
 - Suppose finding a particular element in a binary search tree with 1,000
   elements takes 5 seconds. Given what you know about the asymptotic complexity
@@ -15,8 +14,12 @@
   element in a search tree with 10,000 elements takes? Explain your reasoning.
 
   ## Answer
-  A binary search tree's avergae time complexity is O(logn), because O(log1000 base 2)=10 seconds.
-  So it will take O(log10,000 base 2) to around 13.3 seconds.
+  A binary search tree's avergae time complexity is O(logn).
+  For, $T(n)\leq cf(n), \forall n \geq n_0$.
+  
+  When 5s=c* $\log_{2}1000$, c = 1/2sec.
+  
+  When 1/2* $\log_{2}10000$ around 6.64 seconds. So it will take around 6.64 seconds.
 
 - You measure the time with 10,000 elements and it takes 100 seconds! List 3
   reasons why this could be the case, given that reasoning with the asymptotic
@@ -25,6 +28,6 @@
   ## Answer
   1. The computer setup is not very powerful.
   2. When searching for a specific element in a binary search tree, the partially unbalanced tree may require searching through multiple nodes before finding the desired element.
-  3. Although constant and low-order terms are not factored into the algorithm, they can significantly impact the actual running time in practice.
+  3. There may be an element at the bottom of the tree you want to search for, but the tree is skewed. Or 20% of the programming runs on Windows machine while 80% runs on a Pi.
 
 Add your answers to this markdown file.
