@@ -4,7 +4,7 @@
 - List 3 reasons why asymptotic analysis may be misleading with respect to
   actual performance in practice.
   ## Answer
-  1. Asymptotic is just meaning growth this way, it's a kind of change. Also, it removes the constant factor(c) and lower order, it doesn't mean the exact number. Because as n goes to infinte large, the constant factor and lower order are not affect too much. But when the input size is small, 10000*n runs faster than n, even though they have the same asymptotic analysis(n), which can be misleading.
+  1. Asymptotic is just meaning growth this way, it's a kind of change. Also, it removes the constant factor(c) and lower order, it doesn't mean the exact number. Because as n goes to infinte large, the constant factor and lower order are not affect too much. But when the input size is small, 10000*n runs much slower than n, even though they have the same asymptotic analysis(n), which can be misleading.
   2. Hardware and Platform Variability: In today's world of computer hardware like memory hierarchies, and parallelism can all affect how well a program runs. Even if you have the same algorithm, it might not work the same on different hardware or if you use different compilers and settings.
   3. n0 must reach a certain number of n
 
