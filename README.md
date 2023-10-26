@@ -32,5 +32,4 @@
 
 Add your answers to this markdown file.
 
-// get some hints from below website:
-// https://math.stackexchange.com/questions/3359564/what-does-n-0-mean-when-describing-big-o-notation#:~:text=Big%2DO%20notation's%20English%20definition,and%20does%20so%20until%20infinity.
+get some hints from below website: https://math.stackexchange.com/questions/3359564/what-does-n-0-mean-when-describing-big-o-notation#:~:text=Big%2DO%20notation's%20English%20definition,and%20does%20so%20until%20infinity.
