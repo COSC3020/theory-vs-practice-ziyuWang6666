@@ -6,7 +6,7 @@
   ## Answer
   1. Asymptotic is just meaning growth this way, it's a kind of change. Also, it removes the constant factor(c) and lower order, it doesn't mean the exact number. Because as n goes to infinte large, the constant factor and lower order are not affect too much. But when the input size is small, 10000*n runs much slower than n, even though they have the same asymptotic analysis(n), which can be misleading.
   2. Hardware and Platform Variability: In today's world of computer hardware like memory hierarchies, and parallelism can all affect how well a program runs. Even if you have the same algorithm, it might not work the same on different hardware or if you use different compilers and settings.
-  3. n0 must reach a certain number of n
+  3. n0 must reach a certain number of n. The English definition of Big-O notation typically possesses the phrase "for sufficiently large values of n." In this context, the value n0 represents the threshold. Before n reaching the value of n0, the equation $T(n)\leq cO(f(n))$ is not necessarily valid. In the case where n0 is set to 1, Big-O notation may appear to be loose. But, n0 serves as the point at which the equation becomes true and remains so indefinitely.
 
 - Suppose finding a particular element in a binary search tree with 1,000
   elements takes 5 seconds. Given what you know about the asymptotic complexity
@@ -31,3 +31,6 @@
   3. There may be an element at the bottom of the tree you want to search for, but the tree is skewed. Or 20% of the programming runs on Windows machine while 80% runs on a Pi.
 
 Add your answers to this markdown file.
+
+// get some hints from below website:
+// https://math.stackexchange.com/questions/3359564/what-does-n-0-mean-when-describing-big-o-notation#:~:text=Big%2DO%20notation's%20English%20definition,and%20does%20so%20until%20infinity.
