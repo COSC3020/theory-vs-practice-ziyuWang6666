@@ -6,7 +6,8 @@
   ## Answer
   1. Asymptotic is just meaning growth this way, it's a kind of change. Also, it removes the constant factor(c) and lower order, it doesn't mean the exact number. Because as n goes to infinte large, the constant factor and lower order are not affect too much. But when the input size is small, 10000*n runs much slower than n, even though they have the same asymptotic analysis(n), which can be misleading.
   2. Hardware and Platform Variability: In today's world of computer hardware like memory hierarchies, and parallelism can all affect how well a program runs. Even if you have the same algorithm, it might not work the same on different hardware or if you use different compilers and settings.
-  3. n0 is just a constant number, it doesn't reach certain number of n.
+  3. Cache effect ignored: Asymptotic analysis typically focuses on algorithmic complexity in terms of input size, but it often neglects the impact of cache misses and other details of memory hierarchy. Algorithms that are designed with an assumption of good cache locality may behave differently in practice when there are a lot of cache misses. For instance, an algorithm that is expected to have O(log n) time complexity may behave more like O(n) if the memory access patterns cause frequent cache misses.
+
 
 - Suppose finding a particular element in a binary search tree with 1,000
   elements takes 5 seconds. Given what you know about the asymptotic complexity
