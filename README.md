@@ -6,7 +6,7 @@
   ## Answer
   1. Asymptoic removes the constant factor(c) and lower order which made it misleading. For instance, Tp(n) = 5x^2+100, Tq(n) = 1000000000x^2, they have the same time complexity of x^2. With the same moderate input size x = 1000, Tq(n) runs much slower than Tq(n) which is misleading.
   2. Hardware and Platform Variability: In today's world of computer hardware like memory hierarchies, and parallelism can all affect how well a program runs. Even if you have the same algorithm, it might not work the same on different hardware or if you use different compilers and settings.
-  3. Input size n is misleading when n is small. For example, when n = 2, 10000*n runs much slower than n, even though they have the same asymptotic analysis(n), which can be misleading.
+  3. Input size n is misleading when n is small. When the input size is small, the runtime analysis can be misleading due to variations in the efficiency of different operations. For instance, consider searching for a target value (e.g., 3) in a small array, such as arr = [1, 2, 3, 4, 5]. The first function, searchElementA, employs a linear search to find the target value, while the second function, searchElementB, uses binary search for the same task. Even though the array is small, the second function searchElementB might take longer than the first function searchElementA. This is because the different ways they search can make their runtimes vary, showing that when dealing with small inputs, the conclusions we draw about performance can be tricky.
 
 
 - Suppose finding a particular element in a binary search tree with 1,000
