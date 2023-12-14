@@ -28,7 +28,7 @@
 
   ## Answer
   1. The computer setup is not very powerful.
-  2. When searching for a specific element in a binary search tree, the partially unbalanced tree may require searching through multiple nodes before finding the desired element.
+  2. Some important considerations include input distribution and implementation-specific factors. Variations in runtime may arise when the arrangement or distribution of elements in the input deviates from the average or expected case assumed by asymptotic analysis. Furthermore, observed runtimes can be influenced by the efficiency of the algorithm's actual implementation, encompassing factors such as hardware dependencies, compiler optimizations, and other implementation-specific details.
   3. There may be an element at the bottom of the tree you want to search for, but the tree is skewed. Or 20% of the programming runs on Windows machine while 80% runs on a Pi.
 
 Add your answers to this markdown file.
